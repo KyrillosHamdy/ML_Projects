@@ -64,4 +64,5 @@ This project implements a deep learning-based system for predicting plant diseas
 - Add treatment recommendations for identified diseases
 - Incorporate ensemble methods for improved accuracy
 
+
 This project provides a practical solution for farmers and gardeners to quickly identify plant diseases from leaf images, enabling early treatment and prevention of crop damage.
