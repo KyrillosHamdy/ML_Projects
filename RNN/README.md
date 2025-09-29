@@ -96,7 +96,7 @@ $$
 \theta = \theta - \eta \cdot d\theta
 $$
 
-where $$ \eta $$ is the learning rate.
+where $$\eta$$ is the learning rate.
 
 ---
 
