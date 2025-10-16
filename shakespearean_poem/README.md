@@ -1,12 +1,12 @@
-# Shakespearean Text Generator 🎭
+# Shakespearean Text Generator 
 
 A character-level LSTM neural network that generates text in the style of William Shakespeare. This project uses TensorFlow/Keras to train a recurrent neural network on Shakespeare's works and generate new text that mimics his distinctive writing style.
 
-## 📖 Overview
+##  Overview
 
 This project implements a character-level text generation model using Long Short-Term Memory (LSTM) networks. The model learns patterns in Shakespeare's writing at the character level and can generate new text that follows similar linguistic patterns, vocabulary, and style.
 
-## ✨ Features
+##  Features
 
 - **Character-level text generation**: Learns patterns at the character level for fine-grained text control
 - **LSTM architecture**: Uses 128 LSTM units for effective sequence modeling
@@ -14,7 +14,7 @@ This project implements a character-level text generation model using Long Short
 - **Seed text priming**: Allows starting generation with custom seed phrases
 - **Interactive generation**: User-friendly interface for generating text with custom parameters
 
-## 🏗️ Model Architecture
+##  Model Architecture
 
 ```
 Sequential Model:
@@ -34,7 +34,7 @@ Sequential Model:
 - Training Epochs: 10
 - Optimizer: RMSprop (learning_rate=0.01)
 
-## 📊 Dataset
+##  Dataset
 
 - **Source**: Shakespeare's complete works (~1.1M characters)
 - **Subset Used**: 300,000 characters (positions 200,000-500,000)
@@ -43,7 +43,7 @@ Sequential Model:
   - Character-level tokenization
   - One-hot encoding for neural network input
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -89,7 +89,7 @@ jupyter notebook Shakespearean_Poem.ipynb
    print(generated_text)
    ```
 
-## 🎛️ Key Functions
+##  Key Functions
 
 ### `sample(preds, temperature)`
 Implements temperature-based sampling for character selection:
@@ -106,14 +106,14 @@ Main text generation function that:
 - Generates characters iteratively
 - Returns complete generated text
 
-## 📈 Training Results
+##  Training Results
 
 The model shows steady improvement in loss over 10 epochs:
 - Epoch 1: Loss ~2.61
 - Epoch 10: Loss ~1.29
 - Training time: ~2-4 seconds per epoch on GPU
 
-## 🎯 Example Output
+##  Example Output
 
 **Input Seed**: "When shall we three meet again"
 **Generated Text**: 
@@ -126,7 +126,7 @@ thy hearts of but it all thee;
 how that i with the
 ```
 
-## 🔬 How It Works
+##  How It Works
 
 1. **Character Encoding**: Each character is converted to a one-hot vector
 2. **Sequence Creation**: Text is split into overlapping sequences of 40 characters
@@ -134,7 +134,7 @@ how that i with the
 4. **Generation**: Starting with a seed, the model predicts subsequent characters iteratively
 5. **Temperature Sampling**: Randomness is controlled via temperature parameter
 
-## 🎨 Applications
+##  Applications
 
 This character-level approach is particularly useful for:
 - **Creative writing assistance**: Generate Shakespeare-style poetry and prose
@@ -142,46 +142,24 @@ This character-level approach is particularly useful for:
 - **Style transfer**: Learn and mimic specific writing styles
 - **Data augmentation**: Create synthetic text data for training other models
 
-## ⚡ Performance Considerations
+##  Performance Considerations
 
 - **Memory Usage**: One-hot encoding requires significant memory for large vocabularies
 - **Training Time**: Character-level models need more iterations than word-level models
 - **Generation Speed**: Iterative character prediction can be slow for long texts
 
-## 🚧 Limitations
+##  Limitations
 
 - **Coherence**: Character-level generation may lack long-term semantic coherence
 - **Context Window**: Limited to 40-character context window
 - **Vocabulary**: Restricted to characters present in training data
 - **Modern Prompts**: May not handle non-Shakespearean input seeds well
 
-## 🔮 Future Improvements
+##  Future Improvements
 
-- [ ] Implement beam search for better text quality
-- [ ] Add attention mechanisms for longer context
-- [ ] Experiment with different architectures (GRU, Transformer)
-- [ ] Fine-tune on specific Shakespeare plays
-- [ ] Add text quality metrics and evaluation
-- [ ] Implement model checkpointing and resuming
-
-## 📚 References
-
-- [TensorFlow Text Generation Tutorial](https://www.tensorflow.org/text/tutorials/text_generation)
-- [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-- [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues).
-
-## 👨‍💻 Author
-
-Created as an educational project demonstrating character-level text generation with LSTM networks.
-
----
-
-*"All the world's a stage, and all the men and women merely players"* - William Shakespeare
+-  Implement beam search for better text quality
+-  Add attention mechanisms for longer context
+-  Experiment with different architectures (GRU, Transformer)
+-  Fine-tune on specific Shakespeare plays
+-  Add text quality metrics and evaluation
+-  Implement model checkpointing and resuming
